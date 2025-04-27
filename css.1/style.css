@@ -1,0 +1,175 @@
+
+.header textarea
+{
+    border: solid greenyellow 2px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: none;
+    border-left:solid black 2px ;
+    border-right:solid black 2px ;
+    width: 100%;
+}
+.footer
+{
+    width: 80%;
+margin: auto;}
+.header
+{
+    width: 50%;
+    margin: auto;
+}
+
+.header input
+{
+    border: solid greenyellow 2px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: none;
+    border-left:solid black 2px ;
+    border-right:solid black 2px ;
+    width: 100%;
+}
+#desc:hover
+{
+    border: solid greenyellow 2px;
+    border-radius: 10px;
+}
+#desc
+{
+    transition:border ;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier();
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-left:solid black 2px ;
+    border-right:solid black 2px ;
+    margin-top: 10px;
+
+}
+.header button
+{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 20%;
+    border: none;
+    cursor: pointer;
+
+}
+.searchInput input:hover
+{
+    border: solid greenyellow 2px;
+    border-radius: 10px;
+}
+.searchInput input
+{
+
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: solid black 1px;
+    transition:border ;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier();
+}
+.searchInput
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.card
+{
+   width:80%;
+   height: 80px;
+   padding: 10px;
+   background-color: gainsboro;
+   position: relative;
+   margin-bottom: 20px;
+}
+.icons
+{
+
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    width: 30%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+
+}
+.icons span
+{
+    cursor: pointer;
+
+}
+#updateBtn:hover
+{
+    background-color: transparent;
+}
+
+#updateBtn
+{
+    border: none;
+    border-left:solid black 1px ;
+    border-right:solid black 1px ;
+    transition-property: background-color;
+    transition-duration: .7s;
+    transition-timing-function: cubic-bezier();
+    background-color: yellow;
+
+    
+}
+#addBtn:hover
+{
+    background-color: transparent;
+    color: black;
+    
+    
+}
+#addBtn
+{
+    transition-property: background-color;
+    transition-duration: .7s;
+    transition-timing-function: cubic-bezier();
+    border: none;
+    border-left:solid black 1px ;
+    border-right:solid black 1px ;
+    background-color: green;
+    color: white;
+
+}
+
+.hideBtn
+{
+display: none;
+}
+.cardd
+{
+    background-color: greenyellow;
+    opacity: .5;
+}
+.markDone
+{
+    background-color: greenyellow;
+    opacity: .3;
+}
+.invaled_input
+{
+    border: red ;
+}
