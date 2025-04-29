@@ -1,14 +1,10 @@
 
 .header textarea
 {
-    border: solid greenyellow 2px;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
     margin-top: 20px;
-    border: none;
-    border-left:solid black 2px ;
-    border-right:solid black 2px ;
     width: 100%;
 }
 .footer
@@ -23,31 +19,19 @@ margin: auto;}
 
 .header input
 {
-    border: solid greenyellow 2px;
+  
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
     margin-top: 20px;
-    border: none;
-    border-left:solid black 2px ;
-    border-right:solid black 2px ;
     width: 100%;
 }
-#desc:hover
-{
-    border: solid greenyellow 2px;
-    border-radius: 10px;
-}
+
 #desc
 {
-    transition:border ;
-    transition-duration: .5s;
-    transition-timing-function: cubic-bezier();
+  
     width: 100%;
     padding: 10px;
-    border: none;
-    border-left:solid black 2px ;
-    border-right:solid black 2px ;
     margin-top: 10px;
 
 }
@@ -60,22 +44,13 @@ margin: auto;}
     cursor: pointer;
 
 }
-.searchInput input:hover
-{
-    border: solid greenyellow 2px;
-    border-radius: 10px;
-}
+
 .searchInput input
 {
 
     width: 80%;
     padding: 10px;
     margin-bottom: 20px;
-    border: none;
-    border-bottom: solid black 1px;
-    transition:border ;
-    transition-duration: .5s;
-    transition-timing-function: cubic-bezier();
 }
 .searchInput
 {
@@ -84,7 +59,7 @@ margin: auto;}
     justify-content: center;
     margin-top: 20px;
 }
-.container
+.containerr
 {
     display: flex;
     align-items: center;
@@ -94,7 +69,7 @@ margin: auto;}
 .card
 {
    width:80%;
-   height: 80px;
+   height: 150px;
    padding: 10px;
    background-color: gainsboro;
    position: relative;

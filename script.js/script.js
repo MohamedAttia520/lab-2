@@ -5,16 +5,22 @@ var deleteBtn=document.querySelector('#deleteBtn');
 var search_input=document.querySelector('#search_input');
 var setToUpdateBtn=document.querySelector('#setToUpdateBtn');
 var updateBtn=document.querySelector('#updateBtn');
-var doneBtn=document.querySelectorAll('#done');
+var doneBtn=document.querySelector('#done');
 var objList=[];
 var newIndex=0;
 var updatedIndex;
 var searchedCard=[];
 var str;
+var titelErroes=document.querySelector('#titel-erroes');
+var descErroes=document.querySelector('#desc-erroes');
+
 if(localStorage.getItem("toDoList") !==null)
 {
     objList=JSON.parse(localStorage.getItem('toDoList'));
-    newIndex=objList[objList.length-1].id.split(' ')[1]*1
+    if(objList.length>0)
+    {
+        newIndex=objList[objList.length-1]?.id.split(' ')[1]*1;
+    }else{newIndex=0;}
     displayCard(objList);
 }
 
@@ -44,8 +50,10 @@ function setToLocalStorage()
 }
 addBtn.addEventListener('click',function(){
     add();
+    setToLocalStorage();
     displayCard(objList);
     clearInput()
+    resetErrors()
 
 })
 
@@ -56,6 +64,7 @@ function displayCard(arr)
     {
         cartona+=`<div class="card ${arr[i].isDone===true?'markDone':''}"id='${arr[i].id}'>
             <h4>Title :${arr[i].title} </h4>
+            <br>
             <h4>Description :${arr[i].description} </h4>
              <div class="icons">
              <span><i class="fa-solid fa-trash" id="deleteBtn" onclick="deleteCard('${arr[i].id}')"></i></span>
@@ -148,6 +157,7 @@ updateBtn.addEventListener('click',function(){
     displayCard(objList);
     setToLocalStorage();
     clearInput();
+    resetErrors();
     
 })
 
@@ -175,12 +185,12 @@ for(var i=0;i<objList.length;i++)
 }
 function validateTitle()
 {
-var regex=/^[A-Z][a-z]{2,8}$/;
+var regex=/^[A-Z][A-Za-z\s\d]{2,10}$/;
 var str=titleInput.value;
 if(regex.test(str)==true)
 {
 return true;
-}else{return false;}
+}else{titelErroes.classList.replace('d-none','d-block')}
 }
 function validateDescription()
 {
@@ -189,7 +199,12 @@ function validateDescription()
     if(regex.test(str)==true)
     {
         return true;
-    }else{return false;}
+    }else{descErroes.classList.replace('d-none','d-block')}
 }
-titleInput.addEventListener('input',validateTitle);
-descriptionInput.addEventListener('input',validateDescription);
+titleInput.addEventListener('blur',validateTitle);
+descriptionInput.addEventListener('blur',validateDescription);
+function resetErrors()
+{
+    descErroes.classList.replace('d-block','d-none')
+    titelErroes.classList.replace('d-block','d-none')
+}
